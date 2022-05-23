@@ -33,6 +33,6 @@ jobs:
     - name: GCP instance creation
       run: |
            terraform init
-           terraform apply -auto-approve
+           terraform destroy -auto-approve
       env: 
         GOOGLE_APPLICATION_CREDENTIALS: ${{ steps.auth.outputs.credentials_file_path }}
