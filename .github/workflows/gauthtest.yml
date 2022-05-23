@@ -3,7 +3,7 @@ name: gauthtest
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
  my_ci_part:
