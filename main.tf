@@ -1,6 +1,6 @@
 provider "google" {
   credentials = ""
-  project = "playgroundsandbox"
+  project = "aty-tst-350008"
   region = "us-central1"
   zone = "us-central1-a"
 }
