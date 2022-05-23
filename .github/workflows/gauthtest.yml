@@ -29,7 +29,6 @@ jobs:
       run: |-
         gcloud auth login --brief --cred-file='${{ steps.auth.outputs.credentials_file_path }}'
         gcloud config set project aty-tst-350008
-        gcloud services list
 
     - name: GCP instance creation
       run: |
