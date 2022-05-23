@@ -23,6 +23,12 @@ jobs:
         create_credentials_file: 'true'
         workload_identity_provider: 'projects/178272902313/locations/global/workloadIdentityPools/my-pool/providers/git'
         service_account: 'aty-tst@aty-tst-350008.iam.gserviceaccount.com'
+        
+    - id: 'gcloud'
+      name: 'gcloud'
+      run: |-
+        gcloud auth login --brief --cred-file="${{ steps.auth.outputs.credentials_file_path }}"
+        gcloud services list
 
     - name: GCP instance creation
       run: |
