@@ -24,11 +24,7 @@ jobs:
         workload_identity_provider: 'projects/178272902313/locations/global/workloadIdentityPools/google-github/providers/git-provider'
         service_account: 'aty-tst@aty-tst-350008.iam.gserviceaccount.com'
         
-    - id: 'gcloud'
-      name: 'gcloud'
-      run: |-
-        gcloud auth login --brief --cred-file='${{ steps.auth.outputs.credentials_file_path }}'
-        gcloud config set project aty-tst-350008
+
 
     - name: GCP instance creation
       run: |
