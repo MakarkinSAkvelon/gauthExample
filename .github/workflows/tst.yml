@@ -14,7 +14,7 @@ jobs:
       run: |
        dif="variable1"
        echo "$dif"
-       echo echo "::set-output name=define-variable-output::$dif"
+       echo "::set-output name=define-variable-output::$dif"
 
   job2:
     name: checktest
