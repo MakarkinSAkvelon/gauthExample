@@ -12,7 +12,7 @@ jobs:
     steps:
     - id: define-variable
       run: |
-       dif= "variable11"
+       dif= echo "variable11"
        echo "$dif"
        echo "::set-output name=define-variable-output::$dif"
 
