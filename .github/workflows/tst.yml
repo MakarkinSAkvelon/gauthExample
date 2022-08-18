@@ -12,7 +12,7 @@ jobs:
     steps:
     - id: define-variable
       run: |
-       dif="${{ secrets.TESTKEY }}"
+       dif=echo "${{ secrets.TESTKEY }}
        echo "$dif"
        echo "::set-output name=define-variable-output::$dif"
   job2:
