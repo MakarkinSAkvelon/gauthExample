@@ -14,12 +14,14 @@ jobs:
        echo "$dif"
       
     - name: check variable
-      run: echo "$dif"
+      run: |
+       echo "$dif"
   job2:
     name: checktest
     runs-on: ubuntu-latest
     needs: job1
     steps:
     - name: get variable
-      run: echo "$dif
+      run: |
+       echo "$dif"
     
