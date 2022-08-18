@@ -9,12 +9,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: define variable
-      run: dif = "variable1"
+      run: |
+       dif = "variable1"
+       echo "$dif"
+      
     - name: check variable
       run: echo "$dif"
   job2:
     name: checktest
     runs-on: ubuntu-latest
+    needs: job1
     steps:
     - name: get variable
       run: echo "$dif
