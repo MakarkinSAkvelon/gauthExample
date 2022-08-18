@@ -12,8 +12,6 @@ jobs:
     steps:
     - id: define-variable
       run: |
-       echo "${{ secrets.TESTKEY }}" | base64 -d > /tmp/gcp_access.json
-       cat /tmp/gcp_access.json
        dif="${{ secrets.TESTKEY }}"
        echo "$dif"
        echo "::set-output name=define-variable-output::$dif"
@@ -25,6 +23,3 @@ jobs:
     - name: get variable
       run: |
        echo "${{needs.job1.outputs.pass-output}}"
-       cat /tmp/gcp_access.json
-
-    
