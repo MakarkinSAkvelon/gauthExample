@@ -12,10 +12,9 @@ jobs:
     steps:
     - id: define-variable
       run: |
-       dif= echo "variable11"
+       dif="variable1"
        echo "$dif"
        echo "::set-output name=define-variable-output::$dif"
-
   job2:
     name: checktest
     runs-on: ubuntu-latest
