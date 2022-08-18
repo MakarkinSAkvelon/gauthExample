@@ -7,11 +7,14 @@ jobs:
   job1:
     name: simpletst
     runs-on: ubuntu-latest
+    outputs:
+      pass-output: ${{ steps.define-variable.outputs.define-variable-output }}
     steps:
-    - name: define variable
+    - id: define-variable
       run: |
        dif="variable1"
        echo "$dif"
+       echo echo "::set-output name=define-variable-output::$dif"
       
     - name: check variable
       run: |
@@ -23,5 +26,5 @@ jobs:
     steps:
     - name: get variable
       run: |
-       echo "$dif"
+       echo "${{needs.job1.outputs.pass-output}}
     
