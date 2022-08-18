@@ -1,0 +1,21 @@
+name: simpletst
+
+on:
+ workflow_dispatch:
+ 
+jobs:
+  job1:
+    name: simpletst
+    runs-on: ubuntu-latest
+    steps:
+    - name: define variable
+      run: $dif = echo "variable1"
+    - name: check variable
+      run: echo "$dif"
+  job2:
+    name: checktest
+    runs-on: ubuntu-latest
+    steps:
+    - name: get variable
+      run: echo "$dif
+    
