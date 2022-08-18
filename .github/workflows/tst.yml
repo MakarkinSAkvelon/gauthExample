@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: define variable
-      run:  echo "variable1"
+      run: dif = echo "variable1"
     - name: check variable
       run: echo "$dif"
   job2:
