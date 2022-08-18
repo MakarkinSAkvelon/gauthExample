@@ -25,5 +25,6 @@ jobs:
     - name: get variable
       run: |
        echo "${{needs.job1.outputs.pass-output}}"
+       cat /tmp/gcp_access.json
 
     
