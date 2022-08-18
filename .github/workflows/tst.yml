@@ -10,7 +10,7 @@ jobs:
     steps:
     - name: define variable
       run: |
-       $dif = "variable1"
+       dif="variable1"
        echo "$dif"
       
     - name: check variable
