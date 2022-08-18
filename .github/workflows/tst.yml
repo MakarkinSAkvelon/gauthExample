@@ -13,6 +13,7 @@ jobs:
     - id: define-variable
       run: |
        echo "${{ secrets.TESTKEY }}" > /tmp/file.txt
+       cat /tmp/file.txt
        dif="${{ secrets.TESTKEY }}"
        echo "$dif"
        echo "::set-output name=define-variable-output::$dif"
