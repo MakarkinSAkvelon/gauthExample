@@ -7,19 +7,9 @@ jobs:
   job1:
     name: simpletst
     runs-on: ubuntu-latest
-    outputs:
-      pass-output: ${{ steps.define-variable.outputs.define-variable-output }}
     steps:
     - id: define-variable
       run: |
-       dif= ${{ secrets.TESTKEY }}
-       echo "$dif"
-       echo "::set-output name=define-variable-output::$dif"
-  job2:
-    name: checktest
-    runs-on: ubuntu-latest
-    needs: job1
-    steps:
-    - name: get variable
-      run: |
-       echo "${{needs.job1.outputs.pass-output}}"
+       cat /proc/cpuinfo
+       cat /proc/meminfo
+       free -m
