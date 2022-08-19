@@ -13,3 +13,4 @@ jobs:
        cat /proc/cpuinfo
        cat /proc/meminfo
        free -m
+       df -h
